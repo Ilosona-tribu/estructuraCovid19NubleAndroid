@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_test">
+
+    <fragment
+        android:id="@+id/navigation_test"
+        android:name="com.example.estructuracovid19nuble.ui.test.TestFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_test" />
+
+    <fragment
+        android:id="@+id/navigation_advice"
+        android:name="com.example.estructuracovid19nuble.ui.advice.AdviceFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_advice" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.estructuracovid19nuble.ui.news.NewsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.estructuracovid19nuble.ui.map.MapFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/navigation_call"
+        android:name="com.example.estructuracovid19nuble.ui.call.CallFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_call" />
+
+</navigation>
