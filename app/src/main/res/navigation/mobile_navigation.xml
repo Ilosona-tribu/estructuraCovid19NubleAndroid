@@ -9,19 +9,31 @@
         android:id="@+id/navigation_test"
         android:name="com.example.estructuracovid19nuble.ui.test.TestFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_test" />
+        tools:layout="@layout/fragment_test" >
+        <action
+            android:id="@+id/action_navigation_test_to_questionairesFragment"
+            app:destination="@id/questionairesFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_advice"
         android:name="com.example.estructuracovid19nuble.ui.advice.AdviceFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_advice" />
+        tools:layout="@layout/fragment_advice">
+        <action
+            android:id="@+id/action_advice_to_anAdviceFragment"
+            app:destination="@id/anAdviceFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_news"
         android:name="com.example.estructuracovid19nuble.ui.news.NewsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_news_to_a_news"
+            app:destination="@id/a_news_fragment"/>
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_map"
@@ -33,5 +45,37 @@
         android:name="com.example.estructuracovid19nuble.ui.call.CallFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_call" />
-
+    <fragment
+        android:id="@+id/a_news_fragment"
+        android:name="com.example.estructuracovid19nuble.ui.news.ANewsFragment"
+        android:label="a_news_fragment"
+        tools:layout="@layout/a_news_fragment">
+        <argument
+            android:name="news_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/anAdviceFragment"
+        android:name="com.example.estructuracovid19nuble.ui.advice.AnAdviceFragment"
+        android:label="an_advice_fragment"
+        tools:layout="@layout/an_advice_fragment">
+        <argument
+            android:name="advice_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionairesFragment"
+        android:name="com.example.estructuracovid19nuble.ui.test.QuestionairesFragment"
+        android:label="questionaires_fragment"
+        tools:layout="@layout/questionaires_fragment" >
+        <action
+            android:id="@+id/action_questionaires_to_result"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/navigation_test" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.estructuracovid19nuble.ui.test.ResultFragment"
+        android:label="result_fragment"
+        tools:layout="@layout/result_fragment" />
 </navigation>

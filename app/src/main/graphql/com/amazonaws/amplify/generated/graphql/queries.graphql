@@ -1,0 +1,860 @@
+# this is an auto generated file. This will be overwritten
+query SyncNews(
+  $filter: ModelNewsFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncNews(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      title
+      description
+      detail
+      url_background_image
+      url_thumbnail_image
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetNews($id: ID!) {
+  getNews(id: $id) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListNewss(
+  $filter: ModelNewsFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listNewss(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      detail
+      url_background_image
+      url_thumbnail_image
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncMaps(
+  $filter: ModelMapFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncMaps(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      title
+      description
+      url_map
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetMap($id: ID!) {
+  getMap(id: $id) {
+    id
+    title
+    description
+    url_map
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListMaps($filter: ModelMapFilterInput, $limit: Int, $nextToken: String) {
+  listMaps(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      url_map
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncUsers(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    tests {
+      items {
+        id
+        image_test
+        test_description
+        test_result
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        user {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncTests(
+  $filter: ModelTestFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncTests(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      image_test
+      test_description
+      test_result
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      user {
+        id
+        tests {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetTest($id: ID!) {
+  getTest(id: $id) {
+    id
+    image_test
+    test_description
+    test_result
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    user {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListTests(
+  $filter: ModelTestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTests(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      image_test
+      test_description
+      test_result
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      user {
+        id
+        tests {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncQuestionnaires(
+  $filter: ModelQuestionnaireFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncQuestionnaires(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetQuestionnaire($id: ID!) {
+  getQuestionnaire(id: $id) {
+    id
+    image_questionnaire
+    title_questionnaire
+    description_questionnaire
+    question {
+      items {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListQuestionnaires(
+  $filter: ModelQuestionnaireFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listQuestionnaires(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncQuestions(
+  $filter: ModelQuestionFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncQuestions(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetQuestion($id: ID!) {
+  getQuestion(id: $id) {
+    id
+    text_question
+    question_type
+    list_options
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListQuestions(
+  $filter: ModelQuestionFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listQuestions(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncResponses(
+  $filter: ModelResponsesFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncResponses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      question {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      response
+      group {
+        id
+        responses {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetResponses($id: ID!) {
+  getResponses(id: $id) {
+    id
+    question {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    response
+    group {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListResponsess(
+  $filter: ModelResponsesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listResponsess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      question {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      response
+      group {
+        id
+        responses {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncTestEntries(
+  $filter: ModelTestEntriesFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncTestEntries(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetTestEntries($id: ID!) {
+  getTestEntries(id: $id) {
+    id
+    responses {
+      items {
+        id
+        question {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        response
+        group {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListTestEntriess(
+  $filter: ModelTestEntriesFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTestEntriess(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query SyncAdvice(
+  $filter: ModelAdviceFilterInput
+  $limit: Int
+  $nextToken: String
+  $lastSync: AWSTimestamp
+) {
+  syncAdvice(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+    lastSync: $lastSync
+  ) {
+    items {
+      id
+      title
+      description
+      detail
+      url_background_image
+      url_thumbnail_image
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}
+query GetAdvice($id: ID!) {
+  getAdvice(id: $id) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+query ListAdvices(
+  $filter: ModelAdviceFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listAdvices(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      title
+      description
+      detail
+      url_background_image
+      url_thumbnail_image
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    nextToken
+    startedAt
+  }
+}

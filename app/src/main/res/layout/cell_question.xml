@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"
+        android:layout_height="wrap_content"
+        android:text="Question here?"
+        android:padding="10dp"
+        android:textAlignment="center" />
+    <TextView
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textSize="@dimen/text_size_small"
+        android:text="Sub question description here"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_question"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/rep_checkbox"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+<!--            <CheckBox xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Text of checkbox"-->
+<!--                app:useMaterialThemeColors="false" />-->
+
+<!--            <CheckBox xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Another of checkbox"-->
+<!--                app:useMaterialThemeColors="false" />-->
+
+<!--            <CheckBox xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="One more of checkbox"-->
+<!--                app:useMaterialThemeColors="false" />-->
+        </LinearLayout>
+        <RadioGroup
+            android:visibility="gone"
+            android:id="@+id/rep_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/first"
+            style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Si"/>
+            <RadioButton
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"/>
+        </RadioGroup>
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_margin="5dp"
+            android:id="@+id/rep_txt"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:hint="Hint response!"
+            />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

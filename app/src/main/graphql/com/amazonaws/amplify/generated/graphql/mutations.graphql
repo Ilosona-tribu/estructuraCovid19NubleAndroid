@@ -1,0 +1,901 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateNews(
+  $input: CreateNewsInput!
+  $condition: ModelNewsConditionInput
+) {
+  createNews(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateNews(
+  $input: UpdateNewsInput!
+  $condition: ModelNewsConditionInput
+) {
+  updateNews(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteNews(
+  $input: DeleteNewsInput!
+  $condition: ModelNewsConditionInput
+) {
+  deleteNews(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateMap(
+  $input: CreateMapInput!
+  $condition: ModelMapConditionInput
+) {
+  createMap(input: $input, condition: $condition) {
+    id
+    title
+    description
+    url_map
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateMap(
+  $input: UpdateMapInput!
+  $condition: ModelMapConditionInput
+) {
+  updateMap(input: $input, condition: $condition) {
+    id
+    title
+    description
+    url_map
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteMap(
+  $input: DeleteMapInput!
+  $condition: ModelMapConditionInput
+) {
+  deleteMap(input: $input, condition: $condition) {
+    id
+    title
+    description
+    url_map
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateUser(
+  $input: CreateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  createUser(input: $input, condition: $condition) {
+    id
+    tests {
+      items {
+        id
+        image_test
+        test_description
+        test_result
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        user {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateUser(
+  $input: UpdateUserInput!
+  $condition: ModelUserConditionInput
+) {
+  updateUser(input: $input, condition: $condition) {
+    id
+    tests {
+      items {
+        id
+        image_test
+        test_description
+        test_result
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        user {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteUser(
+  $input: DeleteUserInput!
+  $condition: ModelUserConditionInput
+) {
+  deleteUser(input: $input, condition: $condition) {
+    id
+    tests {
+      items {
+        id
+        image_test
+        test_description
+        test_result
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        user {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateTest(
+  $input: CreateTestInput!
+  $condition: ModelTestConditionInput
+) {
+  createTest(input: $input, condition: $condition) {
+    id
+    image_test
+    test_description
+    test_result
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    user {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateTest(
+  $input: UpdateTestInput!
+  $condition: ModelTestConditionInput
+) {
+  updateTest(input: $input, condition: $condition) {
+    id
+    image_test
+    test_description
+    test_result
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    user {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteTest(
+  $input: DeleteTestInput!
+  $condition: ModelTestConditionInput
+) {
+  deleteTest(input: $input, condition: $condition) {
+    id
+    image_test
+    test_description
+    test_result
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    user {
+      id
+      tests {
+        items {
+          id
+          image_test
+          test_description
+          test_result
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateQuestionnaire(
+  $input: CreateQuestionnaireInput!
+  $condition: ModelQuestionnaireConditionInput
+) {
+  createQuestionnaire(input: $input, condition: $condition) {
+    id
+    image_questionnaire
+    title_questionnaire
+    description_questionnaire
+    question {
+      items {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateQuestionnaire(
+  $input: UpdateQuestionnaireInput!
+  $condition: ModelQuestionnaireConditionInput
+) {
+  updateQuestionnaire(input: $input, condition: $condition) {
+    id
+    image_questionnaire
+    title_questionnaire
+    description_questionnaire
+    question {
+      items {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteQuestionnaire(
+  $input: DeleteQuestionnaireInput!
+  $condition: ModelQuestionnaireConditionInput
+) {
+  deleteQuestionnaire(input: $input, condition: $condition) {
+    id
+    image_questionnaire
+    title_questionnaire
+    description_questionnaire
+    question {
+      items {
+        id
+        text_question
+        question_type
+        list_options
+        questionnaire {
+          id
+          image_questionnaire
+          title_questionnaire
+          description_questionnaire
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateQuestion(
+  $input: CreateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  createQuestion(input: $input, condition: $condition) {
+    id
+    text_question
+    question_type
+    list_options
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateQuestion(
+  $input: UpdateQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  updateQuestion(input: $input, condition: $condition) {
+    id
+    text_question
+    question_type
+    list_options
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteQuestion(
+  $input: DeleteQuestionInput!
+  $condition: ModelQuestionConditionInput
+) {
+  deleteQuestion(input: $input, condition: $condition) {
+    id
+    text_question
+    question_type
+    list_options
+    questionnaire {
+      id
+      image_questionnaire
+      title_questionnaire
+      description_questionnaire
+      question {
+        items {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateResponses(
+  $input: CreateResponsesInput!
+  $condition: ModelResponsesConditionInput
+) {
+  createResponses(input: $input, condition: $condition) {
+    id
+    question {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    response
+    group {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateResponses(
+  $input: UpdateResponsesInput!
+  $condition: ModelResponsesConditionInput
+) {
+  updateResponses(input: $input, condition: $condition) {
+    id
+    question {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    response
+    group {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteResponses(
+  $input: DeleteResponsesInput!
+  $condition: ModelResponsesConditionInput
+) {
+  deleteResponses(input: $input, condition: $condition) {
+    id
+    question {
+      id
+      text_question
+      question_type
+      list_options
+      questionnaire {
+        id
+        image_questionnaire
+        title_questionnaire
+        description_questionnaire
+        question {
+          nextToken
+          startedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    response
+    group {
+      id
+      responses {
+        items {
+          id
+          response
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      _version
+      _deleted
+      _lastChangedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateTestEntries(
+  $input: CreateTestEntriesInput!
+  $condition: ModelTestEntriesConditionInput
+) {
+  createTestEntries(input: $input, condition: $condition) {
+    id
+    responses {
+      items {
+        id
+        question {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        response
+        group {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateTestEntries(
+  $input: UpdateTestEntriesInput!
+  $condition: ModelTestEntriesConditionInput
+) {
+  updateTestEntries(input: $input, condition: $condition) {
+    id
+    responses {
+      items {
+        id
+        question {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        response
+        group {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteTestEntries(
+  $input: DeleteTestEntriesInput!
+  $condition: ModelTestEntriesConditionInput
+) {
+  deleteTestEntries(input: $input, condition: $condition) {
+    id
+    responses {
+      items {
+        id
+        question {
+          id
+          text_question
+          question_type
+          list_options
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        response
+        group {
+          id
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation CreateAdvice(
+  $input: CreateAdviceInput!
+  $condition: ModelAdviceConditionInput
+) {
+  createAdvice(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation UpdateAdvice(
+  $input: UpdateAdviceInput!
+  $condition: ModelAdviceConditionInput
+) {
+  updateAdvice(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}
+mutation DeleteAdvice(
+  $input: DeleteAdviceInput!
+  $condition: ModelAdviceConditionInput
+) {
+  deleteAdvice(input: $input, condition: $condition) {
+    id
+    title
+    description
+    detail
+    url_background_image
+    url_thumbnail_image
+    _version
+    _deleted
+    _lastChangedAt
+  }
+}

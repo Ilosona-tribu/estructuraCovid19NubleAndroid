@@ -2,6 +2,7 @@ package com.example.estructuracovid19nuble;
 
 import android.os.Bundle;
 
+import com.example.estructuracovid19nuble.utils.MyApp;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +12,11 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
+    private MyApp myApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.MyappTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
@@ -26,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         //NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+
+        myApp = MyApp.getInstance();
+    }
+
+    public MyApp getMyApp(){
+        if (myApp == null){
+            myApp = MyApp.getInstance();
+        }
+        return myApp;
     }
 
 }
