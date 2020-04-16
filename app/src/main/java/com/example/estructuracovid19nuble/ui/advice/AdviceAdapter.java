@@ -33,10 +33,13 @@ public class AdviceAdapter extends RecyclerView.Adapter<com.example.estructuraco
         return new com.example.estructuracovid19nuble.ui.advice.AdviceAdapter.ViewHolder(view);
     }
 
+
+
     // binds the data to the TextView in each row
     @Override
     public void onBindViewHolder(com.example.estructuracovid19nuble.ui.advice.AdviceAdapter.ViewHolder holder, int position) {
         ListAdvicesQuery.Item item = advices.get(position);
+
         holder.title.setText(item.title());
         if (item.url_background_image() != null) {
             Picasso.get().load(item.url_background_image()).into(holder.bgImg);
@@ -53,6 +56,12 @@ public class AdviceAdapter extends RecyclerView.Adapter<com.example.estructuraco
     public int getItemCount() {
         return advices.size();
     }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
 
     // resets the list with a new set of data
     public void setItems(List<ListAdvicesQuery.Item> items) {
@@ -82,4 +91,6 @@ public class AdviceAdapter extends RecyclerView.Adapter<com.example.estructuraco
     public interface ItemClickListener {
         void onItemClick(View view, int position);
     }
+
+
 }

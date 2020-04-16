@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 
 import com.amazonaws.amplify.generated.graphql.ListNewssQuery;
 import com.example.estructuracovid19nuble.MainActivity;
+import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.databinding.ANewsFragmentBinding;
 import com.example.estructuracovid19nuble.utils.MyApp;
+import com.google.android.material.button.MaterialButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +22,8 @@ public class ANewsFragment extends Fragment {
     private ANewsViewModel mViewModel;
     private MyApp myApp;
     private ANewsFragmentBinding binding;
+    private MaterialButton btn_back;
+
 
     public static ANewsFragment newInstance() {
         return new ANewsFragment();
@@ -34,8 +38,15 @@ public class ANewsFragment extends Fragment {
         ListNewssQuery.Item item = myApp.news.get(myApp.clicked_news);
 
         binding = ANewsFragmentBinding.inflate(inflater, container, false);
-        binding.title.setText(item.title() + item.detail());
-        binding.description.setText(item.toString());
+        binding.title.setText(item.title());
+        binding.detail.setText(item.detail());
+        btn_back = binding.btnBack;
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return binding.getRoot();
     }

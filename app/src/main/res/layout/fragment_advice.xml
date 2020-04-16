@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="168dp"
+        android:layout_height="170dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-50dp"
         android:background="@drawable/bg_blue_gradient"
@@ -38,9 +38,11 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="397dp"
-            android:layout_height="404dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="411dp"
+            android:layout_height="406dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -53,8 +55,8 @@
             android:id="@+id/txt_search"
             android:layout_width="341dp"
             android:layout_height="48dp"
-            android:layout_marginEnd="31dp"
-            android:layout_marginStart="31dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/round_editext"
             android:hint="@string/hint_search_advice"
@@ -62,7 +64,6 @@
             android:paddingStart="5dp"
             app:layout_constraintBottom_toTopOf="@+id/materialTextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -70,10 +71,9 @@
             android:id="@+id/materialTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="139dp"
-            android:layout_marginStart="138dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
             android:text="Consejos"
             android:textSize="@dimen/text_size_large"
             app:layout_constraintBottom_toTopOf="@+id/recycler_view"

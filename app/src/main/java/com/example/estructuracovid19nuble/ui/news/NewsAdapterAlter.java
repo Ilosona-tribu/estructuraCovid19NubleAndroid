@@ -38,7 +38,7 @@ public class NewsAdapterAlter extends RecyclerView.Adapter<NewsAdapterAlter.View
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         ListNewssQuery.Item item = news.get(position);
-        holder.title.setText(item.detail());
+        holder.title.setText(item.title());
         holder.subTitle.setText(item.description());
         if (item.url_background_image() != null){
 //            Glide.with(holder.itemView).load(item.url_background_image()).thumbnail(0.1f).into(holder.bgImg);

@@ -19,12 +19,15 @@ import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.databinding.ANewsFragmentBinding;
 import com.example.estructuracovid19nuble.databinding.AnAdviceFragmentBinding;
 import com.example.estructuracovid19nuble.utils.MyApp;
+import com.google.android.material.button.MaterialButton;
 
 public class AnAdviceFragment extends Fragment {
 
     private AnAdviceViewModel mViewModel;
     private AnAdviceFragmentBinding binding;
     private MyApp myApp;
+    private MaterialButton btn_back;
+
 
     public static AnAdviceFragment newInstance() {
         return new AnAdviceFragment();
@@ -37,7 +40,15 @@ public class AnAdviceFragment extends Fragment {
         ListAdvicesQuery.Item item = myApp.advices.get(myApp.clicked_advices);
 
         binding = AnAdviceFragmentBinding.inflate(inflater, container, false);
-        binding.title.setText(item.toString());
+        binding.detail.setText(item.detail());
+        binding.title.setText(item.title());
+        btn_back = binding.btnBack;
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return binding.getRoot();
     }
