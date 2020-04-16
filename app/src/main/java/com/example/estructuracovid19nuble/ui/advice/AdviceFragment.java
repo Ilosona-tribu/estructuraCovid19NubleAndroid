@@ -138,7 +138,7 @@ public class AdviceFragment extends Fragment {
             for (ListAdvicesQuery.Item item : advices) {
                 Log.i(TAG, item.toString());
             }
-            advices.addAll((ArrayList<ListAdvicesQuery.Item>) advices.clone());
+            //advices.addAll((ArrayList<ListAdvicesQuery.Item>) advices.clone());
             myApp.advices = advices;
 
             runOnUiThread(new Runnable() {
