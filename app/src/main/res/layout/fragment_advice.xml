@@ -8,9 +8,10 @@
     tools:context=".ui.advice.AdviceFragment">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="163dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-50dp"
         android:background="@drawable/bg_blue_gradient"
@@ -18,18 +19,23 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="60dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="176dp"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/logonuble" />
+            android:layout_width="71dp"
+            android:layout_height="81dp"
+            android:layout_marginBottom="64dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/logonuble"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/top_corner"
@@ -38,48 +44,33 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="411dp"
-            android:layout_height="406dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="361dp"
+            android:layout_height="448dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             android:scrollbars="vertical"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+            app:layout_constraintTop_toBottomOf="@+id/txt_search"
             tools:listitem="@layout/cell_advice" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txt_search"
-            android:layout_width="341dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginStart="40dp"
+            android:layout_width="380dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:background="@drawable/round_editext"
             android:hint="@string/hint_search_advice"
-            android:paddingLeft="25dp"
-            android:paddingStart="5dp"
-            app:layout_constraintBottom_toTopOf="@+id/materialTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/materialTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:text="Consejos"
-            android:textSize="@dimen/text_size_large"
+            android:paddingLeft="5dp"
             app:layout_constraintBottom_toTopOf="@+id/recycler_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_search" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
