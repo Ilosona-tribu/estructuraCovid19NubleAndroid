@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="352dp"
         android:layout_marginBottom="-50dp"
         android:background="@drawable/bg_blue_gradient">
 
@@ -28,18 +28,21 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logo_nuble" />
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logonuble" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/txt_nuble"
-                android:textColor="#FFF"
-                android:textSize="@dimen/text_size_large"
-                android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="170dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/callcentersola" />
+
 
         </LinearLayout>
     </RelativeLayout>
@@ -63,17 +66,17 @@
             android:textSize="@dimen/btn_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.09" />
+            app:layout_constraintVertical_bias="0.056" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_call"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="@dimen/btn_width_large"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="@color/color_btn_blue_light"
             android:text="+92331234569"
             android:textSize="@dimen/btn_text_size"
@@ -82,6 +85,7 @@
             app:iconGravity="textStart"
             app:iconSize="@dimen/btn_icon_size"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_call"
             tools:ignore="MissingConstraints" />
@@ -91,7 +95,6 @@
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="@dimen/btn_width_large"
             android:layout_height="@dimen/btn_height"
-            android:layout_marginTop="24dp"
             android:backgroundTint="@color/color_btn_green"
             android:text="+92331234568"
             android:textSize="@dimen/btn_text_size"
@@ -100,7 +103,7 @@
             app:iconGravity="textStart"
             app:iconSize="35dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_call"
             tools:ignore="MissingConstraints" />

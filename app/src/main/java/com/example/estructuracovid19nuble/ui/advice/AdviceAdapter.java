@@ -43,6 +43,9 @@ public class AdviceAdapter extends RecyclerView.Adapter<com.example.estructuraco
         } else {
             Picasso.get().load("https://www.dw.com/image/52700426_304.jpg").into(holder.bgImg);
         }
+        if(item.url_thumbnail_image()!=null){
+            Picasso.get().load(item.url_thumbnail_image()).into(holder.bgImg);
+        }
     }
 
     // total number of rows

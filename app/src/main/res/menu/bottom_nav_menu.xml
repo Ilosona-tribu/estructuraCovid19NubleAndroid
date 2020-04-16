@@ -3,26 +3,22 @@
     <item
         android:id="@+id/navigation_test"
         android:icon="@drawable/test"
-        android:title= "" />
+        android:title= "Test" />
     <item
         android:id="@+id/navigation_advice"
         android:icon="@drawable/advice"
-        android:title= ""
+        android:title= "Consejos"
         />
     <item
         android:id="@+id/navigation_news"
         android:icon="@drawable/news"
-        android:title= ""/>
+        android:title= "Noticias"/>
 
-    <item
-        android:id="@+id/navigation_map"
-        android:icon="@drawable/map"
-        android:title="" />
 
     <item
         android:id="@+id/navigation_call"
         android:icon="@drawable/call"
-        android:title= "" />
+        android:title= "Contacto" />
 
 
 </menu>

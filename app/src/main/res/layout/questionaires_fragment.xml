@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:id="@+id/btn_back"
-            android:text="Back"
+            android:text="Volver"
             android:textColor="@color/color_btn_blue_light" />
 
         <com.google.android.material.button.MaterialButton
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:text="Cancel"
+            android:text="Cancelar"
             android:id="@+id/btn_cancel"
             android:textColor="@color/color_btn_blue_light" />
     </RelativeLayout>
@@ -51,7 +51,7 @@
         android:layout_margin="20dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="@color/color_btn_blue_light"
-        android:text="Next"
+        android:text="Siguiente"
         app:cornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

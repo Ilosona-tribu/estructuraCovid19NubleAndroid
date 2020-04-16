@@ -35,11 +35,7 @@
             app:destination="@id/a_news_fragment"/>
     </fragment>
 
-    <fragment
-        android:id="@+id/navigation_map"
-        android:name="com.example.estructuracovid19nuble.ui.map.MapFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_map" />
+
     <fragment
         android:id="@+id/navigation_call"
         android:name="com.example.estructuracovid19nuble.ui.call.CallFragment"
