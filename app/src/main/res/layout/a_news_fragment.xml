@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
-        android:layout_height="163dp"
+        android:layout_height="220dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="-50dp"
         android:background="@drawable/bg_blue_gradient"
@@ -43,6 +43,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginTop="32dp"
             android:paddingTop="10dp"
+            android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="@dimen/text_size_medium"
             android:textStyle="bold"
