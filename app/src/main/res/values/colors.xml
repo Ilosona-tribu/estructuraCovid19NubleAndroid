@@ -15,4 +15,5 @@
     <color name="color_btn_blue_dark">#0161ab</color>
     <color name="color_gradient_blue_1">#00dee3</color>
     <color name="color_gradient_blue_2">#01b1ec</color>
+    <color name="transparent_20">#80000000</color>
 </resources>

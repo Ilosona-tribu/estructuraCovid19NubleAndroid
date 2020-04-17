@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.adapters.QuestionAdapter;
+import com.example.estructuracovid19nuble.adapters.QuestionViewpager2Adapter;
 import com.example.estructuracovid19nuble.utils.MyApp;
 import com.google.android.material.button.MaterialButton;
 
@@ -18,6 +19,7 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class QuestionairesFragment extends Fragment {
 
@@ -26,9 +28,13 @@ public class QuestionairesFragment extends Fragment {
     private ViewPager pager;
     private QuestionAdapter adapter;
 
+    private ViewPager2 pager2;
+    private QuestionViewpager2Adapter adapter2;
+
     private MaterialButton btn_next;
     private MaterialButton btn_back;
     private MaterialButton btn_cancel;
+    private boolean clickable = true;
 
     public static QuestionairesFragment newInstance() {
         return new QuestionairesFragment();
@@ -39,23 +45,31 @@ public class QuestionairesFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         myApp = MyApp.getInstance();
         adapter = new QuestionAdapter(getActivity(), myApp.question_1);
+        adapter2 = new QuestionViewpager2Adapter(getActivity(), myApp.question_1);
 
         View root = inflater.inflate(R.layout.questionaires_fragment, container, false);
-        pager = root.findViewById(R.id.pager);
-        pager.setAdapter(adapter);
+//        pager = root.findViewById(R.id.pager_1);
+//        pager.setAdapter(adapter);
+
+        pager2 = root.findViewById(R.id.pager_2);
+        pager2.setAdapter(adapter2);
+        pager2.setUserInputEnabled(false);
 
         btn_next = root.findViewById(R.id.btn_next);
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("QuestionView: ", pager.getCurrentItem() + "/" + adapter.getCount());
-                if (pager.getCurrentItem() == adapter.getCount() - 1){
+                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter.getCount());
+                if (pager2.getCurrentItem() == adapter.getCount() - 1) {
                     //Finish survey, trigger result fragment.
-                    myApp.replies = adapter.getReplies();
-                    NavDirections action = QuestionairesFragmentDirections.actionQuestionairesToResult();
-                    Navigation.findNavController(v).navigate(action);
+                    if (clickable){
+                        clickable = false;
+                        myApp.replies = adapter.getReplies();
+                        NavDirections action = QuestionairesFragmentDirections.actionQuestionairesToResult();
+                        Navigation.findNavController(v).navigate(action);
+                    }
                 } else {
-                    pager.setCurrentItem(pager.getCurrentItem() + 1);
+                    pager2.setCurrentItem(pager2.getCurrentItem() + 1);
                 }
             }
         });
@@ -64,9 +78,9 @@ public class QuestionairesFragment extends Fragment {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("QuestionView: ", pager.getCurrentItem() + "/" + adapter.getCount());
-                if (pager.getCurrentItem() > 0 ) {
-                    pager.setCurrentItem(pager.getCurrentItem() - 1);
+                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter.getCount());
+                if (pager2.getCurrentItem() > 0) {
+                    pager2.setCurrentItem(pager2.getCurrentItem() - 1);
                 }
 
             }

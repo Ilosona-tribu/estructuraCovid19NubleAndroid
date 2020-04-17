@@ -40,8 +40,11 @@ public class AdviceAdapter extends RecyclerView.Adapter<com.example.estructuraco
         holder.title.setText(item.title());
         if (item.url_background_image() != null) {
             Picasso.get().load(item.url_background_image()).into(holder.bgImg);
-        } else {
-            Picasso.get().load("https://www.dw.com/image/52700426_304.jpg").into(holder.bgImg);
+//        } else {
+//            Picasso.get().load("https://www.dw.com/image/52700426_304.jpg").into(holder.bgImg);
+        }
+        if (item.url_thumbnail_image() != null){
+            Picasso.get().load(item.url_thumbnail_image()).into(holder.thumbImg);
         }
     }
 

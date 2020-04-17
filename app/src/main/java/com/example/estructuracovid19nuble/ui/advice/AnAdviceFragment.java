@@ -19,6 +19,8 @@ import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.databinding.ANewsFragmentBinding;
 import com.example.estructuracovid19nuble.databinding.AnAdviceFragmentBinding;
 import com.example.estructuracovid19nuble.utils.MyApp;
+import com.google.android.material.button.MaterialButton;
+import com.squareup.picasso.Picasso;
 
 public class AnAdviceFragment extends Fragment {
 
@@ -37,7 +39,17 @@ public class AnAdviceFragment extends Fragment {
         ListAdvicesQuery.Item item = myApp.advices.get(myApp.clicked_advices);
 
         binding = AnAdviceFragmentBinding.inflate(inflater, container, false);
-        binding.title.setText(item.toString());
+        binding.detail.setText(item.detail());
+        binding.title.setText(item.title());
+        Picasso.get().load(item.url_thumbnail_image()).into(binding.cardThumbnail);
+        Picasso.get().load(item.url_background_image()).into(binding.bgImg);
+
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return binding.getRoot();
     }

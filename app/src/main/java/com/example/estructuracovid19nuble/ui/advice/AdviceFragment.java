@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.amazonaws.amplify.generated.graphql.ListAdvicesQuery;
@@ -45,6 +46,7 @@ public class AdviceFragment extends Fragment {
     private MyApp myApp;
 
     private TextInputEditText txt_search;
+    private ImageButton btn_back;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -53,7 +55,6 @@ public class AdviceFragment extends Fragment {
         adviceViewModel =
                 ViewModelProviders.of(this).get(AdviceViewModel.class);
         View root = inflater.inflate(R.layout.fragment_advice, container, false);
-//        View root = inflater.inflate(R.layout.fragment_map, container, false);
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
@@ -93,6 +94,14 @@ public class AdviceFragment extends Fragment {
                 Log.e(TAG, s.toString());
                 filter(s.toString());
 
+            }
+        });
+
+        btn_back = root.findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
             }
         });
 
@@ -138,7 +147,8 @@ public class AdviceFragment extends Fragment {
             for (ListAdvicesQuery.Item item : advices) {
                 Log.i(TAG, item.toString());
             }
-            advices.addAll((ArrayList<ListAdvicesQuery.Item>) advices.clone());
+            //Just double data to test scroll view.
+            //advices.addAll((ArrayList<ListAdvicesQueryicesQuery.Item>) advices.clone());
             myApp.advices = advices;
 
             runOnUiThread(new Runnable() {

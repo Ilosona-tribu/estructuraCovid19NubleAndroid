@@ -28,14 +28,20 @@ public class ANewsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        myApp = ((MainActivity)getActivity()).getMyApp();
+        myApp = ((MainActivity) getActivity()).getMyApp();
         //int position = ANewsFragmentArgs.fromBundle(getArguments()).getNewsId();
         //Log.e("ANewsFragment", item.id() + item.title() + item.detail() + item.url_background_image() + item.url_thumbnail_image());
         ListNewssQuery.Item item = myApp.news.get(myApp.clicked_news);
 
         binding = ANewsFragmentBinding.inflate(inflater, container, false);
         binding.title.setText(item.title() + item.detail());
-        binding.description.setText(item.toString());
+        binding.detail.setText(item.toString());
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return binding.getRoot();
     }

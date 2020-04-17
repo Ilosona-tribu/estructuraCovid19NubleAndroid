@@ -26,10 +26,8 @@ public class NewsAdapterAlter extends RecyclerView.Adapter<NewsAdapterAlter.View
         this.mInflater = LayoutInflater.from(context);
     }
 
-    // inflates the row layout from xml when needed
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        View view = mInflater.inflate(R.layout.cell_item, parent, false);
         View view = mInflater.inflate(R.layout.cell_news, parent, false);
         return new ViewHolder(view);
     }
@@ -43,9 +41,8 @@ public class NewsAdapterAlter extends RecyclerView.Adapter<NewsAdapterAlter.View
         if (item.url_background_image() != null){
 //            Glide.with(holder.itemView).load(item.url_background_image()).thumbnail(0.1f).into(holder.bgImg);
             Picasso.get().load(item.url_background_image()).into(holder.bgImg);
-        } else{
-//            Glide.with(holder.itemView).load("https://www.dw.com/image/52700426_304.jpg").thumbnail(0.1f).into(holder.bgImg);
-            Picasso.get().load("https://www.dw.com/image/52700426_304.jpg").into(holder.bgImg);
+//        } else{
+//            Picasso.get().load("https://www.dw.com/image/52700426_304.jpg").into(holder.bgImg);
         }
     }
 
