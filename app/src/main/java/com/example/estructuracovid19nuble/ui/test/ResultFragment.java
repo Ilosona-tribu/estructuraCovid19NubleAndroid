@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.adapters.ResultViewModel;
@@ -38,7 +40,7 @@ public class ResultFragment extends Fragment {
 
         binding = ResultFragmentBinding.inflate(inflater, container, false);
 
-        binding.txtResult.setText(getScore(myApp.replies));
+        binding.txtResult.setText(getScore(myApp.replies, binding.txtResult, binding.llContent));
 
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class ResultFragment extends Fragment {
         return binding.getRoot();
     }
 
-    private String getScore(ArrayList<Reply> replies) {
+    private String getScore(ArrayList<Reply> replies, TextView txtResult, LinearLayout linearLayout) {
         //"Suspect" "Urgency" "Normal"
 //        normal -> if  responses array has "no" or "ninguna"
 //        suspected -> if responses array has "fiebre" or "dolor de garganta" or "tos seca"
@@ -65,14 +67,17 @@ public class ResultFragment extends Fragment {
         String result = replies.toString().toLowerCase();
         Log.e("result: ", result);
         if (result.contains("ninguna") || result.contains("no")) {
+            linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_green));
             return getString(R.string.text_result_normal);
         }
 
         if (result.contains("fiebre") || result.contains("dolor de garganta") || result.contains("tos seca")) {
+            linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_red));
             return getString(R.string.text_result_suspect);
         }
 
         if (!result.contains("ninguna") && result.contains("dificultad respiratoria")) {
+            linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_red));
             return getString(R.string.text_result_urgency);
         }
         return getString(R.string.text_result_normal);

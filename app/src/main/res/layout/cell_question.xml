@@ -4,13 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp">
+    android:paddingLeft="30dp"
+    android:background="@drawable/top_corner_withoutborder"
+    android:paddingRight="30dp">
 
     <TextView
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:textStyle="bold"
         android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/color_btn_blue_dark"
         android:layout_height="wrap_content"
         android:text="Question here?"
         android:padding="10dp"
@@ -23,9 +26,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sub_question"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="20dp"/>
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="20dp"/>-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -33,13 +36,28 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/rep_checkbox"
             android:visibility="gone"
             android:orientation="vertical">
+<!--            <CheckBox-->
+<!--                style="@style/CheckBoxSurvey"-->
+<!--                android:text="test check box"/>-->
+
+<!--            <CheckBox-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:drawableStart="@drawable/checkbox_btn"-->
+<!--                android:button="@null"-->
+<!--                android:background="@drawable/checkbox_bg"-->
+<!--                android:checked="true"-->
+<!--                android:layoutDirection="rtl"-->
+<!--                android:padding="20dp"-->
+<!--                android:text="test check box test check box test check box test check box test check box test check box" />-->
 
         </LinearLayout>
         <RadioGroup
@@ -48,16 +66,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checkedButton="@+id/first"
-            style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"
+            android:layoutDirection="rtl"
             android:orientation="vertical">
+<!--            style="@style/CheckBoxSurvey"-->
             <RadioButton
+                android:background="@drawable/checkbox_bg"
+                android:padding="20dp"
+                android:button="@drawable/checkbox_btn"
                 android:id="@+id/first"
-                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/text_yes"/>
             <RadioButton
+                android:background="@drawable/checkbox_bg"
+                android:padding="20dp"
+                android:button="@drawable/checkbox_btn"
+                android:layout_margin="5dp"
                 android:id="@+id/second"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/text_no"/>
         </RadioGroup>

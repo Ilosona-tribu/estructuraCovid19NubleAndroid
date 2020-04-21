@@ -15,7 +15,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:labelVisibilityMode="unlabeled"
-        app:itemIconTint="@android:color/holo_blue_light"
+        app:itemIconTint="@color/selector_tab_icon"
         app:layout_constraintRight_toRightOf="parent"
         app:menu="@menu/bottom_nav_menu" />
 

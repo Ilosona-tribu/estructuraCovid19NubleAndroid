@@ -45,14 +45,14 @@
         tools:context=".ui.test.TestFragment">
 
         <ImageView
+            android:padding="5dp"
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:src="@drawable/ic_covid_blue"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -65,23 +65,22 @@
             android:text="@string/test_text_title"
             android:textAlignment="center"
             android:textSize="@dimen/btn_text_size"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.062" />
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_test"
+            android:textAllCaps="false"
             style="@style/Widget.MaterialComponents.Button.Icon"
             android:layout_width="@dimen/btn_width_medium"
-            android:layout_height="@dimen/btn_height"
+            android:layout_height="@dimen/btn_height_medium"
             android:backgroundTint="@color/color_btn_blue_dark"
             android:text="Iniciar Test"
+            android:textStyle="bold"
             android:textSize="@dimen/btn_text_size"
             app:cornerRadius="@dimen/corner_btn"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"

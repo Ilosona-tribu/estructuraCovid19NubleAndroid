@@ -1,6 +1,7 @@
 package com.example.estructuracovid19nuble.adapters;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.airbnb.paris.Paris;
 import com.amazonaws.amplify.generated.graphql.ListQuestionnairesQuery;
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.utils.Reply;
@@ -104,6 +106,9 @@ public class QuestionViewpager2Adapter extends RecyclerView.Adapter<QuestionView
                 rep_checkbox.setTag(position);
                 for (int i = 0; i < item.list_options().size(); i++) {
                     final CheckBox checkBox = new CheckBox(context);
+                    Paris.style(checkBox).apply(R.style.CheckBoxSurvey);
+                    set_checkbox_attributes(checkBox);
+
                     String option = item.list_options().get(i);
                     checkBox.setText(option);
                     Log.e("tagging", position + " " + i + " " + option);
@@ -123,6 +128,19 @@ public class QuestionViewpager2Adapter extends RecyclerView.Adapter<QuestionView
                 break;
         }
 
+    }
+
+    private void set_checkbox_attributes(CheckBox checkBox) {
+//        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        lp.setMargins(0, 15, 0, 15);
+//        checkBox.setLayoutParams(lp);
+        checkBox.setElevation(2);
+        checkBox.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+//        checkBox.setPadding(20, 20, 20, 20);
+//        checkBox.setBackground(context.getDrawable(R.drawable.checkbox_bg));
+//        checkBox.setButtonDrawable(context.getDrawable(R.drawable.checkbox_btn));
+        checkBox.setButtonDrawable(null);
+        checkBox.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.checkbox_btn, 0);
     }
 
     public void setItems(ArrayList<ListQuestionnairesQuery.Item1> items) {

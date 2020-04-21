@@ -16,4 +16,8 @@
     <color name="color_gradient_blue_1">#00dee3</color>
     <color name="color_gradient_blue_2">#01b1ec</color>
     <color name="transparent_20">#80000000</color>
+    <color name="color_gradient_red_1">#e8303a</color>
+    <color name="color_gradient_red_2">#e8303a</color>
+    <color name="color_gradient_green_1">#02e4a5</color>
+    <color name="color_gradient_green_2">#00aea4</color>
 </resources>

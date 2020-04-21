@@ -1,98 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="163dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-50dp"
+    <!--    header-->
+    <LinearLayout
         android:background="@drawable/bg_blue_gradient"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="-50dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/transparent_20"
+        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:id="@+id/layout_up"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="-50dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/logo"
+            android:layout_centerInParent="true"
             android:layout_width="60dp"
             android:layout_height="80dp"
-            android:layout_gravity="center"
-
-            android:layout_marginBottom="64dp"
-            android:layout_marginEnd="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_logo_nuble"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:lines="1"
-            android:id="@+id/title"
-            android:text="Title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="72dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:paddingTop="10dp"
-            android:textColor="#FFF"
-            android:textSize="@dimen/text_size_medium"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_back"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginBottom="26dp"
-            android:layout_marginEnd="88dp"
-            android:layout_marginTop="16dp"
-            android:text="Volver"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/logo"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:src="@drawable/ic_logo_nuble" />
+    </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/top_corner">
+        android:layout_marginTop="150dp"
+        android:layout_height="0dp"
+        android:background="@drawable/top_corner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_up">
 
+        <ImageView
+            android:id="@+id/img_detail"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            tools:ignore="MissingConstraints" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/transparent_20"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/detail"
-            android:text="Detail"
-            android:layout_width="0dp"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Title should be here"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <TextView
+                android:background="@drawable/corner_txt"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:elevation="2dp"
+                android:padding="15dp"
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details should appear ici. Details should appear ici.Details should appear ici.Details should appear ici. Details should appear ici.Details should appear ici. Details should appear ici. Details should appear ici.Details should appear ici. Details should appear ici.Details should appear ici. Details should appear ici. "
+                android:textAlignment="center" />
+        </ScrollView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-</LinearLayout>
+
+
+    <ImageView
+        android:scaleType="centerInside"
+        android:id="@+id/img_thumbnal"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="107dp"
+        android:background="@drawable/ic_circle_bg"
+        android:src="@drawable/news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:scaleType="centerInside"
+        android:id="@+id/img_thumbnail"
+        app:civ_border="false"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="110dp"
+        android:src="@drawable/news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

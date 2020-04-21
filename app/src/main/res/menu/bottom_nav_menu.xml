@@ -3,26 +3,26 @@
     <item
         android:id="@+id/navigation_test"
         android:icon="@drawable/test"
-        android:title= "" />
+        android:title= "Test" />
     <item
         android:id="@+id/navigation_advice"
         android:icon="@drawable/advice"
-        android:title= ""
+        android:title= "Advices"
         />
     <item
         android:id="@+id/navigation_news"
         android:icon="@drawable/news"
-        android:title= ""/>
+        android:title= "News"/>
 
     <item
         android:id="@+id/navigation_map"
         android:icon="@drawable/map"
-        android:title="" />
+        android:title="Maps" />
 
     <item
         android:id="@+id/navigation_call"
         android:icon="@drawable/call"
-        android:title= "" />
+        android:title= "Call" />
 
 
 </menu>

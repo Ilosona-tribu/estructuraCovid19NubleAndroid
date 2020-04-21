@@ -1,6 +1,10 @@
 package com.example.estructuracovid19nuble.ui.advice;
 
+import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -20,13 +24,16 @@ import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.utils.ClientFactory;
 import com.example.estructuracovid19nuble.utils.MyApp;
 import com.example.estructuracovid19nuble.utils.RecyclerTouchListener;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import javax.annotation.Nonnull;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
@@ -37,6 +44,7 @@ import static com.amazonaws.mobile.auth.core.internal.util.ThreadUtils.runOnUiTh
 
 public class AdviceFragment extends Fragment {
 
+    private static final int REQ_CODE_SPEECH_INPUT = 1;
     private AdviceViewModel adviceViewModel;
     private AWSAppSyncClient mAWSAppSyncClient;
     private RecyclerView recyclerView;
@@ -47,6 +55,7 @@ public class AdviceFragment extends Fragment {
 
     private TextInputEditText txt_search;
     private ImageButton btn_back;
+    private MaterialButton btn_voice;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -105,7 +114,49 @@ public class AdviceFragment extends Fragment {
             }
         });
 
+        btn_voice = root.findViewById(R.id.btn_voicesearch);
+        btn_voice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                triggerVoiceInput();
+            }
+        });
+
         return root;
+    }
+
+    private void triggerVoiceInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                "speech_prompt");
+        try {
+            getActivity().startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(getActivity().getApplicationContext(),
+                    "speech_not_supported",
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQ_CODE_SPEECH_INPUT: {
+                if (resultCode == Activity.RESULT_OK && null != data) {
+                    ArrayList<String> result = data
+                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    txt_search.setText(result.get(0));
+                }
+                break;
+            }
+
+        }
     }
 
     private void filter(String text) {

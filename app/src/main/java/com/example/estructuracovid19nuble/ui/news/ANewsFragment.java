@@ -9,6 +9,7 @@ import com.amazonaws.amplify.generated.graphql.ListNewssQuery;
 import com.example.estructuracovid19nuble.MainActivity;
 import com.example.estructuracovid19nuble.databinding.ANewsFragmentBinding;
 import com.example.estructuracovid19nuble.utils.MyApp;
+import com.squareup.picasso.Picasso;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,7 +36,10 @@ public class ANewsFragment extends Fragment {
 
         binding = ANewsFragmentBinding.inflate(inflater, container, false);
         binding.title.setText(item.title() + item.detail());
-        binding.detail.setText(item.toString());
+        binding.detail.setText(item.description());
+        Picasso.get().load(item.url_thumbnail_image()).into(binding.imgThumbnail);
+        Picasso.get().load(item.url_background_image()).into(binding.imgDetail);
+
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

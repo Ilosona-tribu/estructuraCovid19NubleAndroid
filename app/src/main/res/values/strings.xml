@@ -105,4 +105,6 @@
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
     <string name="hint_txt_rep">Hint response!</string>
+    <string name="txt_consejos">Consejos</string>
+    <string name="text_test">Siguientes</string>
 </resources>

@@ -7,13 +7,16 @@
     <dimen name="text_margin">16dp</dimen>
     <dimen name="corner_btn">20dp</dimen>
     <dimen name="btn_text_size">18sp</dimen>
-    <dimen name="btn_height">80dp</dimen>
+    <dimen name="btn_height_large">80dp</dimen>
+    <dimen name="btn_height_medium">70dp</dimen>
     <dimen name="btn_width_medium">250dp</dimen>
     <dimen name="btn_width_large">300dp</dimen>
     <dimen name="btn_icon_size">30dp</dimen>
-    <dimen name="text_size_large">30sp</dimen>
+    <dimen name="text_size_large">25sp</dimen>
     <dimen name="corner_layour_round">40dp</dimen>
     <dimen name="corner_editext">20dp</dimen>
     <dimen name="text_size_medium">20sp</dimen>
     <dimen name="text_size_small">17sp</dimen>
+    <dimen name="corner_checkbox">10dp</dimen>
+    <dimen name="corner_txtbox_round">10dp</dimen>
 </resources>

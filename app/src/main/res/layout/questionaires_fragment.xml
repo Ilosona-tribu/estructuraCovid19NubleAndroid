@@ -4,35 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/layout_bg_gray"
     tools:context=".ui.test.QuestionairesFragment">
 
     <!--    header-->
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/layout_up"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="100dp"
+        android:layout_marginBottom="-50dp"
+        android:background="@drawable/bg_blue_gradient"
+        tools:ignore="MissingConstraints">
 
-        <com.google.android.material.button.MaterialButton
+        <ImageButton
+            android:layout_centerVertical="true"
             android:id="@+id/btn_back"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:text="Back"
-            android:textColor="@color/color_btn_blue_light" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_centerInParent="true"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_logo_nuble" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_cancel"
+            android:visibility="gone"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:text="Cancel"
-            android:textColor="@color/color_btn_blue_light" />
+            android:textColor="#FFF" />
     </RelativeLayout>
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/relativeLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@color/color_btn_blue_light"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_back"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:text="Back"-->
+<!--            android:textColor="#FFF" />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_cancel"-->
+<!--            style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:text="Cancel"-->
+<!--            android:textColor="#FFF" />-->
+<!--    </RelativeLayout>-->
 
     <!--    content-->
     <androidx.viewpager.widget.ViewPager
@@ -41,25 +80,28 @@
         android:layout_height="0dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_up" />
 
     <androidx.viewpager2.widget.ViewPager2
+        android:background="@drawable/bg_blue_gradient"
         android:id="@+id/pager_2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_up" />
     <!--    footer-->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_next"
+        style="@style/Widget.MaterialComponents.Button.Icon"
         android:layout_width="@dimen/btn_width_medium"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/color_btn_blue_light"
-        android:text="Next"
-        app:cornerRadius="5dp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_height="@dimen/btn_height_medium"
+        android:backgroundTint="@color/color_btn_blue_dark"
+        android:text="@string/text_test"
+        android:textSize="@dimen/btn_text_size"
+        app:cornerRadius="@dimen/corner_btn"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

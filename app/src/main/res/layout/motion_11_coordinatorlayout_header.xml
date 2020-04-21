@@ -8,8 +8,8 @@
     android:fitsSystemWindows="true"
     android:minHeight="40dp"
     app:layoutDescription="@xml/scene_11_header"
-    app:layout_scrollFlags="scroll|enterAlways|snap">
-<!--    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">-->
+    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+<!--    app:layout_scrollFlags="scroll|enterAlways|snap">-->
 
 <!--    android:tint="@color/tintImage"-->
     <ImageView
@@ -42,10 +42,8 @@
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.24000001"
         app:layout_constraintVertical_chainStyle="packed"
         app:srcCompat="@drawable/ic_logo_nuble" />
 

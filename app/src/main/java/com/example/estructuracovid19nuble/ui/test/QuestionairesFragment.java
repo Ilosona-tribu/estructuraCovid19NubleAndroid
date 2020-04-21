@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.adapters.QuestionAdapter;
@@ -32,7 +33,7 @@ public class QuestionairesFragment extends Fragment {
     private QuestionViewpager2Adapter adapter2;
 
     private MaterialButton btn_next;
-    private MaterialButton btn_back;
+    private ImageButton btn_back;
     private MaterialButton btn_cancel;
     private boolean clickable = true;
 

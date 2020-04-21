@@ -55,11 +55,13 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-appsync:2.8.+'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
-
     //Image loader
     implementation 'com.squareup.picasso:picasso:2.71828'
     //Circular imageview
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.mikhaellopez:circularimageview:4.2.0'
+    //View styling dynamically
+    implementation 'com.airbnb.android:paris:1.4.0'
 
     implementation "androidx.core:core-ktx:+"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
