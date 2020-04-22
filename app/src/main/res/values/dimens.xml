@@ -3,6 +3,7 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="app_bar_height">150dp</dimen>
+    <dimen name="app_bar_height_extend">200dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="corner_btn">20dp</dimen>
@@ -19,4 +20,5 @@
     <dimen name="text_size_small">17sp</dimen>
     <dimen name="corner_checkbox">10dp</dimen>
     <dimen name="corner_txtbox_round">10dp</dimen>
+    <dimen name="corner_cell_advice">20dp</dimen>
 </resources>

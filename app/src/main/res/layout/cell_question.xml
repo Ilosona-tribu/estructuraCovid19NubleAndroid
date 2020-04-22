@@ -68,21 +68,14 @@
             android:checkedButton="@+id/first"
             android:layoutDirection="rtl"
             android:orientation="vertical">
-<!--            style="@style/CheckBoxSurvey"-->
             <RadioButton
-                android:background="@drawable/checkbox_bg"
-                android:padding="20dp"
-                android:button="@drawable/checkbox_btn"
+                style="@style/CheckBoxSurvey"
                 android:id="@+id/first"
-                android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/text_yes"/>
             <RadioButton
-                android:background="@drawable/checkbox_bg"
-                android:padding="20dp"
-                android:button="@drawable/checkbox_btn"
-                android:layout_margin="5dp"
+                style="@style/CheckBoxSurvey"
                 android:id="@+id/second"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

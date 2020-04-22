@@ -30,12 +30,10 @@ public class ANewsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         myApp = ((MainActivity) getActivity()).getMyApp();
-        //int position = ANewsFragmentArgs.fromBundle(getArguments()).getNewsId();
-        //Log.e("ANewsFragment", item.id() + item.title() + item.detail() + item.url_background_image() + item.url_thumbnail_image());
         ListNewssQuery.Item item = myApp.news.get(myApp.clicked_news);
 
         binding = ANewsFragmentBinding.inflate(inflater, container, false);
-        binding.title.setText(item.title() + item.detail());
+        binding.title.setText(item.title());
         binding.detail.setText(item.description());
         Picasso.get().load(item.url_thumbnail_image()).into(binding.imgThumbnail);
         Picasso.get().load(item.url_background_image()).into(binding.imgDetail);

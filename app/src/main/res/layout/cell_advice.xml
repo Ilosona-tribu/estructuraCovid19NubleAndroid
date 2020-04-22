@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="180dp"
     android:layout_margin="15dp"
-    app:cardCornerRadius="20dp"
+    app:cardCornerRadius="@dimen/corner_cell_advice"
     android:background="?android:attr/selectableItemBackground"
     android:focusable="true"
     android:clickable="true"
@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:text="Title could be very long, but no longer than two lines please."
             android:textAppearance="?attr/textAppearanceHeadline6"
             android:textColor="@color/cardview_light_background"
@@ -47,8 +48,8 @@
 
         <ImageView
             android:id="@+id/card_thumbnail"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
             android:scaleType="centerInside"

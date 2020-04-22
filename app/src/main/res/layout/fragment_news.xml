@@ -4,20 +4,38 @@
     android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_blue_gradient"
     android:fitsSystemWindows="false">
+<!--    android:background="@drawable/bg_blue_gradient"-->
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
+        android:layout_height="@dimen/app_bar_height_extend"
         app:elevation="0dp"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <include layout="@layout/motion_11_coordinatorlayout_header" />
+        <include layout="@layout/motion_11_coordinatorlayout_header_news" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_news" />
+
+<!--    <ImageView-->
+<!--        android:layout_width="80dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_marginTop="110dp"-->
+<!--        android:background="@drawable/ic_circle_bg"-->
+<!--        android:scaleType="centerInside"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
+<!--    <ImageView-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_marginTop="135dp"-->
+<!--        android:src="@drawable/news"-->
+<!--        android:tint="#FFF"-->
+<!--        android:scaleType="centerInside"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -82,6 +82,8 @@ public class QuestionairesFragment extends Fragment {
                 Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter.getCount());
                 if (pager2.getCurrentItem() > 0) {
                     pager2.setCurrentItem(pager2.getCurrentItem() - 1);
+                } else{
+                    getActivity().onBackPressed();
                 }
 
             }

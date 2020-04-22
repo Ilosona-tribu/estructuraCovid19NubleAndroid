@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.amazonaws.amplify.generated.graphql.ListNewssQuery;
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient;
@@ -41,6 +42,7 @@ public class NewsFragment extends Fragment {
     private ArrayList<ListNewssQuery.Item> news;
     private NewsAdapterAlter adapter;
     private MyApp myApp;
+    private ImageButton btn_back;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -67,6 +69,14 @@ public class NewsFragment extends Fragment {
 
             }
         }));
+
+        btn_back = root.findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
 
         return root;
     }

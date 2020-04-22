@@ -74,7 +74,6 @@ public class AdviceFragment extends Fragment {
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getActivity(), recyclerView, new RecyclerTouchListener.ClickListener() {
             public void onClick(View view, int position) {
                 ListAdvicesQuery.Item item = advices.get(position);
-                Toast.makeText(getActivity(), item.title() + " is selected!", Toast.LENGTH_SHORT).show();
                 myApp.clicked_advices = position;
                 AdviceFragmentDirections.ActionAdviceToAnAdviceFragment action = AdviceFragmentDirections.actionAdviceToAnAdviceFragment(position);
                 Navigation.findNavController(view).navigate(action);
