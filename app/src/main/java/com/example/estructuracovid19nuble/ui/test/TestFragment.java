@@ -59,8 +59,11 @@ public class TestFragment extends Fragment {
                     Toast.makeText(getActivity(), "No questions available, try to restart app", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                NavDirections action = TestFragmentDirections.actionNavigationTestToQuestionairesFragment();
+//                NavDirections action = TestFragmentDirections.actionNavigationTestToQuestionairesFragment();
+//                Navigation.findNavController(v).navigate(action);
+                NavDirections action = TestFragmentDirections.actionNavigationTestToTestSelect();
                 Navigation.findNavController(v).navigate(action);
+
             }
         });
 

@@ -21,4 +21,7 @@
     <dimen name="corner_checkbox">10dp</dimen>
     <dimen name="corner_txtbox_round">10dp</dimen>
     <dimen name="corner_cell_advice">20dp</dimen>
+    <dimen name="margin_overal">16dp</dimen>
+    <dimen name="text_size_huge">35sp</dimen>
+    <dimen name="text_size_gigantic">45sp</dimen>
 </resources>

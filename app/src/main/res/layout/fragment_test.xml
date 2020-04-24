@@ -13,29 +13,22 @@
         android:layout_height="0dp"
         android:background="@drawable/bottom_corner">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="66dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="35dp"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+            android:src="@drawable/ic_logo_nuble" />
 
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
-                android:layout_margin="20dp"
-                android:src="@drawable/ic_logo_nuble" />
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginBottom="-10dp"
+            android:src="@drawable/ic_img_doctor" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"
-                android:src="@drawable/ic_img_doctor" />
-
-        </LinearLayout>
     </RelativeLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -59,9 +52,9 @@
             android:id="@+id/text_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
             android:text="@string/test_text_title"
             android:textAlignment="center"
             android:textSize="@dimen/btn_text_size"

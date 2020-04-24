@@ -99,12 +99,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="text_result_urgency">Urgency: You Should Call 911\n Based on your reported symptoms, you should seek care immediately.</string>
-    <string name="text_result_suspect">Suspect:\n Contact Your Work’s Occupational Health Provider, you should let your work know your current symptoms as soon as possible.</string>
-    <string name="text_result_normal">Normal:\n You Should Practice Social Distancing\n Help stop the spread. When outside the home, stay at least six feet away from other people, avoid groups, and only use public transit if necessary.</string>
+    <string name="text_result_urgency">Urgencia:\n Debe contactarse con nosotros en la pestaña contacto\n. En base a los síntomas reportados, debe buscar atención médica inmediatamente.</string>
+    <string name="text_result_suspect">Sospechoso:\n Debe informar a su trabajo de sus síntomas actuales tan pronto como sea posible..</string>
+    <string name="text_result_normal">Normal:\n Siga los consejos de la aplicación para no contagiarse.</string>
+<!--    <string name="text_result_urgency">Urgency: You Should Call 911\n Based on your reported symptoms, you should seek care immediately.</string>-->
+<!--    <string name="text_result_suspect">Suspect:\n Contact Your Work’s Occupational Health Provider, you should let your work know your current symptoms as soon as possible.</string>-->
+<!--    <string name="text_result_normal">Normal:\n You Should Practice Social Distancing\n Help stop the spread. When outside the home, stay at least six feet away from other people, avoid groups, and only use public transit if necessary.</string>-->
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
     <string name="hint_txt_rep">Hint response!</string>
     <string name="txt_consejos">Consejos</string>
     <string name="text_test">Siguientes</string>
+    <string name="text_test_other">Uso para alguien más</string>
+    <string name="text_test_me">Uso para mi</string>
+    <string name="test_select_title">Respnderá algunas preguntas sobre los síntomas, los viajes y el contacto que ha tenido con otras personas</string>
+    <string name="text_news">Noticias</string>
 </resources>

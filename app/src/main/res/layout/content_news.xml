@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scrollable"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/fragment_news"
+    tools:showIn="@layout/fragment_news_withouttabbar"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,18 +11,6 @@
     android:background="@drawable/top_corner"
     tools:context=".ui.news.NewsFragment">
 
-<!--    <de.hdodenhof.circleimageview.CircleImageView-->
-<!--        android:id="@+id/img_circle"-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:src="@drawable/news"-->
-<!--        android:background="@color/color_btn_blue_light"-->
-<!--        android:scaleType="centerInside"-->
-<!--        app:civ_border_color="@color/layout_bg_gray"-->
-<!--        app:civ_border_width="4dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
     <View
         android:layout_width="match_parent"
         android:layout_height="35dp"

@@ -7,7 +7,7 @@
     android:layout_height="@dimen/app_bar_height"
     android:fitsSystemWindows="true"
     android:minHeight="40dp"
-    app:layoutDescription="@xml/scene_11_header"
+    app:layoutDescription="@xml/scence_11_header_advice"
     app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
 <!--    app:layout_scrollFlags="scroll|enterAlways|snap">-->
 

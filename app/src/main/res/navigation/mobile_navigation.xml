@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_navigation_test_to_questionairesFragment"
             app:destination="@id/questionairesFragment" />
+        <action
+            android:id="@+id/action_navigation_test_to_testSelect"
+            app:destination="@id/testSelect" />
     </fragment>
 
     <fragment
@@ -78,4 +81,12 @@
         android:name="com.example.estructuracovid19nuble.ui.test.ResultFragment"
         android:label="result_fragment"
         tools:layout="@layout/result_fragment" />
+    <fragment
+        android:id="@+id/testSelect"
+        android:name="com.example.estructuracovid19nuble.ui.test.TestSelect"
+        android:label="TestSelect" >
+        <action
+            android:id="@+id/action_testSelect_to_questionairesFragment"
+            app:destination="@id/questionairesFragment" />
+    </fragment>
 </navigation>

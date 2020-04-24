@@ -48,7 +48,8 @@ public class NewsFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
 
         myApp = MyApp.getInstance();
-        View root = inflater.inflate(R.layout.fragment_news, container, false);
+//        View root = inflater.inflate(R.layout.fragment_news, container, false);
+        View root = inflater.inflate(R.layout.fragment_news_withouttabbar, container, false);
         recyclerView = root.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity().getApplicationContext()));
         adapter = new NewsAdapterAlter(getActivity());

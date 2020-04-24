@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.estructuracovid19nuble.utils.CollapsibleToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_bar_height_extend"
+    android:fitsSystemWindows="true"
+    android:minHeight="90dp"
+    tools:showIn="@layout/fragment_news_withouttabbar"
+    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+    <!--    app:layoutDescription="@xml/scene_11_header_news"-->
+    <!--    app:layout_scrollFlags="scroll|enterAlways|snap">-->
+
+    <!--    android:tint="@color/tintImage"-->
+    <!-- 200 - 16 - 35 = 149; 200 - 80/2 - 149 = 11-->
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/ic_circle_bg"
+        android:scaleType="centerInside"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!-- 200 - 149 - 30/2 = 36 -->
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/news"
+        android:tint="#FFF"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</com.example.estructuracovid19nuble.utils.CollapsibleToolbar>
