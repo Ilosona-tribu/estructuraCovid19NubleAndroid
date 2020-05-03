@@ -1,34 +1,74 @@
 {
-    "providers": {
-        "awscloudformation": {
-            "AuthRoleName": "amplify-covid19-chile-33151-authRole",
-            "UnauthRoleArn": "arn:aws:iam::479545181301:role/amplify-covid19-chile-33151-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::479545181301:role/amplify-covid19-chile-33151-authRole",
-            "Region": "us-east-1",
-            "DeploymentBucketName": "amplify-covid19-chile-33151-deployment",
-            "UnauthRoleName": "amplify-covid19-chile-33151-unauthRole",
-            "StackName": "amplify-covid19-chile-33151",
-            "StackId": "arn:aws:cloudformation:us-east-1:479545181301:stack/amplify-covid19-chile-33151/10d844a0-7acb-11ea-a7ad-126c97cb5bc1",
-            "AmplifyAppId": "d2uopbjpmf4tul"
-        }
-    },
-    "api": {
-        "amplifyDatasource-amplify": {
-            "service": "AppSync",
-            "output": {
-                "authConfig": {
-                    "defaultAuthentication": {
-                        "authenticationType": "API_KEY"
-                    },
-                    "additionalAuthenticationProviders": null
-                },
-                "GraphQLAPIIdOutput": "el56uyhckffnncwngcds7jhyie",
-                "GraphQLAPIEndpointOutput": "https://ianjndvuazebzjs2eto5hysfyy.appsync-api.us-east-1.amazonaws.com/graphql",
-                "name": "amplifyDatasource-amplify",
-                "region": "us-east-1",
-                "GraphQLAPIKeyOutput": "da2-nzk44lbxprfr3i2unt42xwbb3y"
-            },
-            "lastPushTimeStamp": "2020-04-13T23:57:08.721Z"
-        }
-    }
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "amplify-covid19-chile-33151-authRole",
+			"UnauthRoleArn": "arn:aws:iam::479545181301:role/amplify-covid19-chile-33151-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::479545181301:role/amplify-covid19-chile-33151-authRole",
+			"Region": "us-east-1",
+			"DeploymentBucketName": "amplify-covid19-chile-33151-deployment",
+			"UnauthRoleName": "amplify-covid19-chile-33151-unauthRole",
+			"StackName": "amplify-covid19-chile-33151",
+			"StackId": "arn:aws:cloudformation:us-east-1:479545181301:stack/amplify-covid19-chile-33151/10d844a0-7acb-11ea-a7ad-126c97cb5bc1",
+			"AmplifyAppId": "d2uopbjpmf4tul"
+		}
+	},
+	"api": {
+		"amplifyDatasource-amplify": {
+			"service": "AppSync",
+			"output": {
+				"authConfig": {
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY"
+					},
+					"additionalAuthenticationProviders": null
+				},
+				"GraphQLAPIIdOutput": "el56uyhckffnncwngcds7jhyie",
+				"GraphQLAPIEndpointOutput": "https://ianjndvuazebzjs2eto5hysfyy.appsync-api.us-east-1.amazonaws.com/graphql",
+				"name": "amplifyDatasource-amplify",
+				"region": "us-east-1",
+				"GraphQLAPIKeyOutput": "da2-nzk44lbxprfr3i2unt42xwbb3y"
+			},
+			"lastPushTimeStamp": "2020-04-13T23:57:08.721Z"
+		}
+	},
+	"auth": {
+		"cognitobcb8866e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/amplify-covid19-chile-33151-deployment/amplify-cfn-templates/auth/cognitobcb8866e-cloudformation-template.yml",
+				"logicalId": "authcognitobcb8866e"
+			},
+			"lastPushTimeStamp": "2020-04-27T22:11:54.529Z",
+			"output": {
+				"IdentityPoolId": "us-east-1:ca2553b5-f05b-4adb-900e-f457b37e519d",
+				"IdentityPoolName": "covid19_identitypool_714787f0__chile"
+			},
+			"lastPushDirHash": "LueoMvXNAHzHUbRp1sdzUzlWeiQ="
+		}
+	},
+	"notifications": {
+		"pinpoint_thanh": {
+			"service": "Pinpoint",
+			"output": {
+				"Arn": "arn:aws:mobiletargeting:us-east-1:479545181301:apps/75ad435b6894428e894fa567d50415e3",
+				"Id": "75ad435b6894428e894fa567d50415e3",
+				"Name": "pinpoint_thanh-chile",
+				"tags": {},
+				"Region": "us-east-1",
+				"FCM": {
+					"ApplicationId": "75ad435b6894428e894fa567d50415e3",
+					"CreationDate": "2020-04-27T20:49:59.819Z",
+					"Enabled": true,
+					"HasCredential": true,
+					"Id": "gcm",
+					"IsArchived": false,
+					"LastModifiedDate": "2020-04-27T20:49:59.819Z",
+					"Platform": "GCM",
+					"Version": 1
+				}
+			},
+			"lastPushTimeStamp": "2020-04-27T20:48:47.300Z"
+		}
+	}
 }

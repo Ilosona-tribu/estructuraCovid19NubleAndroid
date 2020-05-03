@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1003848219219",
+    "firebase_url": "https://ilosona.firebaseio.com",
+    "project_id": "ilosona",
+    "storage_bucket": "ilosona.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003848219219:android:204b49bc3c5d6005f5a4a6",
+        "android_client_info": {
+          "package_name": "com.example.estructuracovid19nuble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003848219219-fdau4kgdjiqcbiuomj3nnsd39t84pq8e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLAn_BCjTTNYEwgAYwBcSqkpXsiIaX1Pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003848219219-fdau4kgdjiqcbiuomj3nnsd39t84pq8e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

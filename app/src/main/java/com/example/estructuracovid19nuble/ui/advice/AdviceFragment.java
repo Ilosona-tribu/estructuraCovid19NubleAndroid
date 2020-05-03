@@ -3,6 +3,7 @@ package com.example.estructuracovid19nuble.ui.advice;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.text.Editable;
@@ -59,6 +60,7 @@ public class AdviceFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        Log.e("onCreateView", "AdviceFragment");
         myApp = MyApp.getInstance();
 
         adviceViewModel =
@@ -73,9 +75,9 @@ public class AdviceFragment extends Fragment {
         // row click listener
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getActivity(), recyclerView, new RecyclerTouchListener.ClickListener() {
             public void onClick(View view, int position) {
-                ListAdvicesQuery.Item item = advices.get(position);
+                //ListAdvicesQuery.Item item = advices.get(position);
                 myApp.clicked_advices = position;
-                AdviceFragmentDirections.ActionAdviceToAnAdviceFragment action = AdviceFragmentDirections.actionAdviceToAnAdviceFragment(position);
+                AdviceFragmentDirections.ActionAdviceToAnAdviceFragment action = AdviceFragmentDirections.actionAdviceToAnAdviceFragment();
                 Navigation.findNavController(view).navigate(action);
             }
 

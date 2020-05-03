@@ -10,6 +10,18 @@
             "StackName": "amplify-covid19-chile-33151",
             "StackId": "arn:aws:cloudformation:us-east-1:479545181301:stack/amplify-covid19-chile-33151/10d844a0-7acb-11ea-a7ad-126c97cb5bc1",
             "AmplifyAppId": "d2uopbjpmf4tul"
+        },
+        "categories": {
+            "auth": {
+                "cognitobcb8866e": {}
+            },
+            "notifications": {
+                "Pinpoint": {
+                    "Name": "pinpoint_thanh-chile",
+                    "Id": "75ad435b6894428e894fa567d50415e3",
+                    "Region": "us-east-1"
+                }
+            }
         }
     }
 }

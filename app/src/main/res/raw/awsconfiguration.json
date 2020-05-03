@@ -12,5 +12,29 @@
             "ApiKey": "da2-nzk44lbxprfr3i2unt42xwbb3y",
             "ClientDatabasePrefix": "amplifyDatasource-amplify_API_KEY"
         }
+    },
+    "CredentialsProvider": {
+        "CognitoIdentity": {
+            "Default": {
+                "PoolId": "us-east-1:ca2553b5-f05b-4adb-900e-f457b37e519d",
+                "Region": "us-east-1"
+            }
+        }
+    },
+    "Auth": {
+        "Default": {
+            "authenticationFlowType": "USER_SRP_AUTH"
+        }
+    },
+    "PinpointAnalytics": {
+        "Default": {
+            "AppId": "75ad435b6894428e894fa567d50415e3",
+            "Region": "us-east-1"
+        }
+    },
+    "PinpointTargeting": {
+        "Default": {
+            "Region": "us-east-1"
+        }
     }
 }

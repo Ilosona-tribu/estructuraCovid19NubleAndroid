@@ -61,7 +61,7 @@ public class NewsFragment extends Fragment {
                 ListNewssQuery.Item item = news.get(position);
                 //Toast.makeText(getActivity(), item.detail() + " is selected!", Toast.LENGTH_SHORT).show();
                 myApp.clicked_news = position;
-                NewsFragmentDirections.ActionNewsToANews action = NewsFragmentDirections.actionNewsToANews(position);
+                NewsFragmentDirections.ActionNewsToANews action = NewsFragmentDirections.actionNewsToANews();
                 Navigation.findNavController(view).navigate(action);
             }
 

@@ -32,22 +32,5 @@
         <include layout="@layout/coordinatorlayout_circle_news" />
 
     </com.google.android.material.appbar.AppBarLayout>
-    <!--    <ImageView-->
-    <!--        android:layout_width="80dp"-->
-    <!--        android:layout_height="80dp"-->
-    <!--        android:layout_marginTop="110dp"-->
-    <!--        android:background="@drawable/ic_circle_bg"-->
-    <!--        android:scaleType="centerInside"-->
-    <!--        android:layout_gravity="center_horizontal"-->
-    <!--        />-->
-    <!--    <ImageView-->
-    <!--        android:layout_width="30dp"-->
-    <!--        android:layout_height="30dp"-->
-    <!--        android:layout_marginTop="135dp"-->
-    <!--        android:src="@drawable/news"-->
-    <!--        android:tint="#FFF"-->
-    <!--        android:scaleType="centerInside"-->
-    <!--        android:layout_gravity="center_horizontal"-->
-    <!--        />-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -31,6 +31,12 @@ public class TestSelect extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         binding = TestSelectFragmentBinding.inflate(inflater, null, false);
 
+        binding.btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().onBackPressed();
+            }
+        });
         binding.btnTestMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
