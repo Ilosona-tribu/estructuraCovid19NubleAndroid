@@ -19,7 +19,7 @@ public class Reply extends ListQuestionnairesQuery.Item1 {
     public Reply(ListQuestionnairesQuery.Item1 item) {
         super(item.__typename(), item.id(), item.text_question(), item.question_type(), item.list_options(), item._version(), item._deleted(), item._lastChangedAt());
         rep_txt = "";
-        rep_bool = false;
+        rep_bool = true;
         if(item.question_type() == QuestionType.OPTIONS){
             rep_options = new ArrayList<>(Collections.nCopies(item.list_options().size(), ""));
         }

@@ -4,18 +4,15 @@ import android.content.Context;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.amazonaws.amplify.generated.graphql.CreateTestEntriesMutation;
 import com.amazonaws.amplify.generated.graphql.ListQuestionnairesQuery;
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.utils.Reply;

@@ -15,6 +15,7 @@
         android:title= "News"/>
 
     <item
+        android:visible="false"
         android:id="@+id/navigation_map"
         android:icon="@drawable/map"
         android:title="Maps" />

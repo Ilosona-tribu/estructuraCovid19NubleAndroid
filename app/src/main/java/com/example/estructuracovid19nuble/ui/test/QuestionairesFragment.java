@@ -45,7 +45,7 @@ public class QuestionairesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         myApp = MyApp.getInstance();
-        adapter = new QuestionAdapter(getActivity(), myApp.question_1);
+//        adapter = new QuestionAdapter(getActivity(), myApp.question_1);
         adapter2 = new QuestionViewpager2Adapter(getActivity(), myApp.question_1);
 
         View root = inflater.inflate(R.layout.questionaires_fragment, container, false);
@@ -60,12 +60,12 @@ public class QuestionairesFragment extends Fragment {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter.getCount());
-                if (pager2.getCurrentItem() == adapter.getCount() - 1) {
+                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter2.getItemCount());
+                if (pager2.getCurrentItem() == adapter2.getItemCount() - 1) {
                     //Finish survey, trigger result fragment.
                     if (clickable){
                         clickable = false;
-                        myApp.replies = adapter.getReplies();
+                        myApp.replies = adapter2.getReplies();
                         NavDirections action = QuestionairesFragmentDirections.actionQuestionairesToResult();
                         Navigation.findNavController(v).navigate(action);
                     }
@@ -79,7 +79,7 @@ public class QuestionairesFragment extends Fragment {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter.getCount());
+                Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter2.getReplies());
                 if (pager2.getCurrentItem() > 0) {
                     pager2.setCurrentItem(pager2.getCurrentItem() - 1);
                 } else{

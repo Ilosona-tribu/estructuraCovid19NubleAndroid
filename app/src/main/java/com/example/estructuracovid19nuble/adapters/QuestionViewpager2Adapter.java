@@ -152,6 +152,10 @@ public class QuestionViewpager2Adapter extends RecyclerView.Adapter<QuestionView
         return this.questions.size();
     }
 
+    public ArrayList<Reply> getReplies() {
+        return replies;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView txtQuestion;
         RadioGroup rep_bool;

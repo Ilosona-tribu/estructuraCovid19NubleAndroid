@@ -66,7 +66,7 @@ public class ResultFragment extends Fragment {
 //        urgency -> if there's no "ninguna" and array has "dificultad respiratoria" (edited)
         String result = replies.toString().toLowerCase();
         Log.e("result: ", result);
-        if (result.contains("ninguna") || result.contains("no")) {
+        if (result.contains("ninguna") || result.contains("non")) {
             linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_green));
             return getString(R.string.text_result_normal);
         }
