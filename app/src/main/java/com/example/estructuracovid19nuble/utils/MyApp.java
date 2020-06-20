@@ -17,6 +17,7 @@ public class MyApp extends Application {
     public ArrayList<ListQuestionnairesQuery.Item1> question_1;
     public boolean is_question_loaded = false;
     public ArrayList<Reply> replies;
+    public Integer resultId;
 
     //Volley variables
     @Override

@@ -40,7 +40,8 @@ public class ResultFragment extends Fragment {
 
         binding = ResultFragmentBinding.inflate(inflater, container, false);
 
-        binding.txtResult.setText(getScore(myApp.replies, binding.txtResult, binding.llContent));
+        //binding.txtResult.setText(getScore(myApp.replies, binding.txtResult, binding.llContent));
+        bindingResult(myApp.resultId, binding.txtResult, binding.llContent);
 
         binding.btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +58,24 @@ public class ResultFragment extends Fragment {
         });
 
         return binding.getRoot();
+    }
+
+    private void bindingResult(Integer resultId, TextView txtResult, LinearLayout linearLayout) {
+        txtResult.setText(getString(resultId));
+        switch (resultId) {
+            case R.string.text_result_normal:
+            case R.string.text_result_suspect:
+            case R.string.text_result_suspect_plus:
+                linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_green));
+                break;
+            case R.string.text_result_attention:
+            case R.string.text_result_attention_plus:
+                linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_yellow));
+                break;
+            case R.string.text_result_urgency:
+                linearLayout.setBackground(getActivity().getDrawable(R.drawable.round_red));
+                break;
+        }
     }
 
     private String getScore(ArrayList<Reply> replies, TextView txtResult, LinearLayout linearLayout) {

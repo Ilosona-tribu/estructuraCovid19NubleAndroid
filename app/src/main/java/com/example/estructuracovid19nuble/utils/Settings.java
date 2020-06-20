@@ -65,4 +65,11 @@ public class Settings {
     public static String getKeyOnce(Context context, String key, String timeId) {
         return getKeyOnce(context, key + "_" + timeId);
     }
+
+    //Strings logic check
+    public static final String LOGIC_NONE_ABOVE = "ninguna de las anteriores";
+    public static final String LOGIC_COUGH = "fiebre o escalofríos (medida con termómetro o no)";
+    public static final String LOGIC_FEVER = "dolor de garganta";
+    public static final String LOGIC_BREATH_SHORT = "sensación de falta de aire";
+
 }

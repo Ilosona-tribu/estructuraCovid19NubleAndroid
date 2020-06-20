@@ -9,12 +9,15 @@ import android.widget.ImageButton;
 
 import com.example.estructuracovid19nuble.R;
 import com.example.estructuracovid19nuble.adapters.QuestionAdapter;
-import com.example.estructuracovid19nuble.adapters.QuestionViewpager2Adapter;
+import com.example.estructuracovid19nuble.adapters.DiagnoseAdapter;
 import com.example.estructuracovid19nuble.utils.MyApp;
 import com.google.android.material.button.MaterialButton;
 
+import java.util.Collections;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.util.Pair;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavDirections;
@@ -30,7 +33,7 @@ public class QuestionairesFragment extends Fragment {
     private QuestionAdapter adapter;
 
     private ViewPager2 pager2;
-    private QuestionViewpager2Adapter adapter2;
+    private DiagnoseAdapter adapter2;
 
     private MaterialButton btn_next;
     private ImageButton btn_back;
@@ -46,7 +49,8 @@ public class QuestionairesFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         myApp = MyApp.getInstance();
 //        adapter = new QuestionAdapter(getActivity(), myApp.question_1);
-        adapter2 = new QuestionViewpager2Adapter(getActivity(), myApp.question_1);
+
+        adapter2 = new DiagnoseAdapter(getActivity(), myApp.question_1);
 
         View root = inflater.inflate(R.layout.questionaires_fragment, container, false);
 //        pager = root.findViewById(R.id.pager_1);
@@ -61,16 +65,20 @@ public class QuestionairesFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter2.getItemCount());
-                if (pager2.getCurrentItem() == adapter2.getItemCount() - 1) {
-                    //Finish survey, trigger result fragment.
-                    if (clickable){
+                Pair<Boolean, Integer> result = adapter2.is_survey_continue(pager2.getCurrentItem());
+                Log.e("QuestionView: ", result.toString());
+                if (result.first) {
+                    //next page
+                    pager2.setCurrentItem(pager2.getCurrentItem() + 1);
+                } else {
+                    //Trigger result screen
+                    if (clickable) {
                         clickable = false;
                         myApp.replies = adapter2.getReplies();
+                        myApp.resultId = result.second;
                         NavDirections action = QuestionairesFragmentDirections.actionQuestionairesToResult();
                         Navigation.findNavController(v).navigate(action);
                     }
-                } else {
-                    pager2.setCurrentItem(pager2.getCurrentItem() + 1);
                 }
             }
         });
@@ -82,7 +90,7 @@ public class QuestionairesFragment extends Fragment {
                 Log.e("QuestionView: ", pager2.getCurrentItem() + "/" + adapter2.getReplies());
                 if (pager2.getCurrentItem() > 0) {
                     pager2.setCurrentItem(pager2.getCurrentItem() - 1);
-                } else{
+                } else {
                     getActivity().onBackPressed();
                 }
 

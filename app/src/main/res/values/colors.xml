@@ -23,4 +23,6 @@
     <color name="color_gradient_green_1">#02e4a5</color>
     <color name="color_gradient_green_2">#00aea4</color>
     <color name="transparent">#00000000</color>
+    <color name="color_gradient_yellow_1">#FF9800</color>
+    <color name="color_gradient_yellow_2">#FFC107</color>
 </resources>

@@ -20,6 +20,7 @@ import com.example.estructuracovid19nuble.utils.ClientFactory;
 import com.example.estructuracovid19nuble.utils.MyApp;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.annotation.Nonnull;
 
@@ -114,6 +115,9 @@ public class TestFragment extends Fragment {
                 if (!questions_1.isEmpty()) {
                     myApp.is_question_loaded = true;
                     myApp.question_1 = questions_1;
+
+                    //TODO reverse the list when Alvaro done query orderby
+                    Collections.reverse(myApp.question_1);
                 }
                 //queryQuestionnaireById(q_id);
             }
